@@ -11,7 +11,7 @@ This tool is written in PowerShell but makes use of:
 The script assume both tools are available.
 
 ## API access - personal access tokens
-The script uses the Azure DevOps and/or Bitbucket Data Center API to fetch all the repositories in your project. Therefore it requires a personal access token (PAT) that has read access to your code. No other privileges are required.
+The script uses the Azure DevOps and Bitbucket Data Center APIs to fetch all the repositories in your project. Therefore a personal access token (PAT) is required that has read access to your code. No other privileges are required.
 
 ## Run the script
 
