@@ -131,3 +131,7 @@ dist
 
 # Exclude vscode launch file
 .vscode/launch.json
+
+# Generated files
+.azure-devops/
+.bitbucket/
