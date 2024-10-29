@@ -65,6 +65,12 @@ param(
   [string]$Username
 )
 
+# Validate that the CLI tool cloc can be found
+if (-not (Get-Command cloc -ErrorAction SilentlyContinue)) {
+  Write-Error "The 'cloc' command-line tool (https://github.com/AlDanial/cloc) is not installed or not found in the system PATH. This tool can be installed directly, via 'npm' (https://www.npmjs.com/package/cloc), or (on Windows) via 'winget install AlDanial.Cloc'."
+  exit 1
+}
+
 # Set output folder to default if not set.
 if ($OutputFolder -eq $null -or $OutputFolder -eq "") {
   $OutputFolder = if ($Source -eq "azure-devops") { ".azure-devops" } else { ".bitbucket" }
